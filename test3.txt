@@ -1,0 +1,24 @@
+func(){
+	a = 3;
+	b = 7;
+	testVal = 576;
+
+	IF (testVal < 600) THEN{
+		testVal = testVal + a;
+	}
+	ELSE{
+		a=a+b;
+	}
+
+	-1
+
+	c=100;
+
+	WHILE(c>40){
+		c=c+a+b+testVal+3+a+16;
+	}
+
+	WHILE(c>40);
+
+	d=30;
+}

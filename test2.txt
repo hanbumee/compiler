@@ -1,0 +1,13 @@
+main() {
+a = 1;
+b=2;
+WHILE(c>a+b){
+	IF(c > 3) THEN{
+		c=c+2;
+	}
+	ELSE{
+		c=c+1;
+	}
+}
+c=3;
+}

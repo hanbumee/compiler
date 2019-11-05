@@ -1,0 +1,27 @@
+BEGIN main
+	LD Reg#2, 1
+	MV Reg#1, Reg#2
+	LD Reg#4, 2
+	MV Reg#3, Reg#4
+label 0:
+	ADD Reg#7, Reg#1, Reg#3
+	LT Reg#8, Reg#7, Reg#5
+	JUMPF Reg#8 label 1
+	LD Reg#6, 3
+	LT Reg#9, Reg#6, Reg#5
+	JUMPT Reg#9 label 2
+	JUMPF Reg#9 label 3
+label 2:
+	LD Reg#4, 2
+	ADD Reg#10, Reg#5, Reg#4
+	MV Reg#5, Reg#10
+label 3:
+	LD Reg#2, 1
+	ADD Reg#11, Reg#5, Reg#2
+	MV Reg#5, Reg#11
+	JUMPT Reg#8 label 0
+label 1:
+	LD Reg#6, 3
+	MV Reg#5, Reg#6
+END main
+Used Register: 11

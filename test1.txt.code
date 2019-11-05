@@ -1,0 +1,44 @@
+BEGIN func
+	LD Reg#2, 3
+	MV Reg#1, Reg#2
+	LD Reg#4, 7
+	MV Reg#3, Reg#4
+	LD Reg#6, 576
+	MV Reg#5, Reg#6
+	LD Reg#7, 600
+	LT Reg#14, Reg#5, Reg#7
+	JUMPT Reg#14 label 0
+	JUMPF Reg#14 label 1
+label 0:
+	ADD Reg#15, Reg#5, Reg#1
+	MV Reg#5, Reg#15
+label 1:
+	ADD Reg#16, Reg#1, Reg#3
+	MV Reg#1, Reg#16
+	LD Reg#9, 100
+	MV Reg#8, Reg#9
+label 2:
+	LD Reg#10, 40
+	LT Reg#17, Reg#10, Reg#8
+	JUMPF Reg#17 label 3
+	ADD Reg#18, Reg#8, Reg#1
+	ADD Reg#19, Reg#18, Reg#3
+	ADD Reg#20, Reg#19, Reg#5
+	LD Reg#2, 3
+	ADD Reg#21, Reg#20, Reg#2
+	ADD Reg#22, Reg#21, Reg#1
+	LD Reg#11, 16
+	ADD Reg#23, Reg#22, Reg#11
+	MV Reg#8, Reg#23
+	JUMPT Reg#17 label 2
+label 3:
+label 4:
+	LD Reg#10, 40
+	LT Reg#24, Reg#10, Reg#8
+	JUMPF Reg#24 label 5
+	JUMPT Reg#24 label 4
+label 5:
+	LD Reg#13, 30
+	MV Reg#12, Reg#13
+END func
+Used Register: 24
